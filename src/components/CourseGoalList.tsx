@@ -20,8 +20,15 @@ const CourseGoalList = ({ goals, onDeleteGoal }: CourseGoalListProps) => {
   let warningBox: ReactNode;
 
   if (goals.length >= 4) {
+    let warningSeverity: "low" | "medium" | "high";
+    goals.length === 4
+      ? (warningSeverity = "low")
+      : goals.length === 5
+      ? (warningSeverity = "medium")
+      : (warningSeverity = "high");
+
     warningBox = (
-      <InfoBox mode="warning">
+      <InfoBox mode="warning" severity={warningSeverity}>
         You're collecting a lot of goals. Don't put too much on your plate!
       </InfoBox>
     );
@@ -29,7 +36,7 @@ const CourseGoalList = ({ goals, onDeleteGoal }: CourseGoalListProps) => {
 
   return (
     <>
-    {warningBox}
+      {warningBox}
       <ul>
         {goals.map((goal) => (
           <li key={goal.id}>
