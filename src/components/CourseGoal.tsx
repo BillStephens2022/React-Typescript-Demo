@@ -1,4 +1,4 @@
-import { type FC, type PropsWithChildren, type ReactNode } from "react";
+import { type FC, type PropsWithChildren } from "react";
 
 // note: alternative way of defining props using ReactNode
 // interface CourseGoalProps {
