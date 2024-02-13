@@ -20,7 +20,7 @@
   
   ## Installation
   
-  npm install
+  deployed URL:  https://billstephens2022.github.io/React-Typescript-Demo/
   
   ## Usage
   
